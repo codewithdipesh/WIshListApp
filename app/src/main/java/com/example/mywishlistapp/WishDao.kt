@@ -21,8 +21,8 @@ abstract class WishDao {
     abstract suspend fun updateWish(wishEntity : Wish)
 
     @Delete
-    abstract fun deleteWish(wishEntity : Wish)
+    abstract suspend fun deleteWish(wishEntity : Wish)
 
     @Query("SELECT * FROM `wish-table` where id = :id")
-    abstract suspend fun getWishesById(id : Long) : Flow<Wish>
+    abstract  fun getWishesById(id : Long) : Flow<Wish>
 }
