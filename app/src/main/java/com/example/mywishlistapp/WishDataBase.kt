@@ -10,5 +10,5 @@ import androidx.room.RoomDatabase
 )
 
 abstract class WishDataBase : RoomDatabase() {
-    abstract fun wishDao()
+    abstract fun wishDao():WishDao
 }
